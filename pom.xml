@@ -7,6 +7,7 @@
     <version>1.0-SNAPSHOT</version>
     <name>maven-bind-plugin Maven Webapp</name>
     <url>http://maven.apache.org</url>
+
     <properties>
         <jettyVersion>7.2.0.v20101020</jettyVersion>
     </properties>
@@ -33,11 +34,13 @@
                 <groupId>org.mortbay.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>8.1.12.v20130726</version>
+
                 <configuration>
                     <scanintervalseconds>0</scanintervalseconds>
                     <stopKey>stop</stopKey>
                     <stopPort>9999</stopPort>
                 </configuration>
+
                 <executions>
                     <execution>
                         <id>start-jetty</id>
@@ -50,6 +53,7 @@
                             <daemon>true</daemon>
                         </configuration>
                     </execution>
+
                     <execution>
                         <id>stop-jetty</id>
                         <phase>post-integration-test</phase>

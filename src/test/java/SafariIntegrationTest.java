@@ -2,6 +2,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -18,7 +19,7 @@ public class SafariIntegrationTest {
 
     @Test
     public void testHelloWorldIndexPage() {
-        WebDriver driver = new SafariDriver();
+        WebDriver driver = new HtmlUnitDriver();
         driver.get("http://localhost:8080");
         WebElement element = driver.findElement(By.tagName("h2"));
         assertThat(element.getText(), is("Hello World!"));
